@@ -5,7 +5,7 @@
 
 Untranslocator allows to get the original bundle path from a translocated macOS app. 
 ## Usage
-if a macOS app is translocated `NSBundle.MainBundle.BundlePath`returns a randomized read-only location - something like:
+if a macOS app is translocated `NSBundle.MainBundle.BundlePath` returns a randomized read-only location - something like:
 ```
 /private/var/folders/xx/xxxxxxxxxxx/x/AppTranslocation/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/x/MyApp.app
 ```
