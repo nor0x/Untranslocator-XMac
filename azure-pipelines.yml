@@ -11,9 +11,9 @@ pool:
 
 
 steps:
-- task: VSBuild@1
+- task: MSBuild@1
   inputs:
-    solution: '**\*.sln'
+    solution: '**/*.sln'
     configuration: 'Release'
 
 - task: NuGetCommand@2
