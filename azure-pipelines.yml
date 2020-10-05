@@ -23,7 +23,7 @@ steps:
     versioningScheme: 'off'
     
 - task: DotNetCoreCLI@2
-continueOnError: true
+  continueOnError: true
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
