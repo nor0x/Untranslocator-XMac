@@ -16,10 +16,6 @@ steps:
     solution: '**/*.sln'
     configuration: 'Release'
 
-- task: NuGetAuthenticate@0
-  inputs:
-    nuGetServiceConnections: 'gh-packages'
-    
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
