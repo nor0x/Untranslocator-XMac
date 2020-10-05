@@ -1,0 +1,45 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'macos-latest'
+
+
+steps:
+- task: VSBuild@1
+  inputs:
+    solution: '**\*.sln'
+    configuration: 'Release'
+
+- task: NuGetCommand@2
+  displayName: NuGet push GitHub-Packages
+  continueOnError: true
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.SourcesDirectory)/*.nupkg'
+    nuGetFeedType: 'external'
+    externalFeedCredentials: 'gh-packages'
+    publishFeedCredentials: 'gh-packages'
+    allowPackageConflicts: false
+
+
+- task: NuGetCommand@2
+  displayName: NuGet push Nuget.org
+  continueOnError: true
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.SourcesDirectory)/*.nupkg'
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'nuget.org'
+    allowPackageConflicts: false
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)'
+    ArtifactName: 'NuGet'
+    publishLocation: 'Container'
