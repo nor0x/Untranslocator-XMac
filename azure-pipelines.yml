@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- main
 
 pool:
   vmImage: 'macos-latest'
@@ -29,8 +29,8 @@ steps:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
     nuGetFeedType: 'external'
-    externalFeedCredentials: 'ghpackages'
-    publishFeedCredentials: 'ghpackages'
+    externalFeedCredentials: 'gh-packages'
+    publishFeedCredentials: 'gh-packages'
     allowPackageConflicts: false
 
 
