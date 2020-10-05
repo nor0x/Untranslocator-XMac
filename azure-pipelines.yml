@@ -17,6 +17,12 @@ steps:
     configuration: 'Release'
 
 - task: NuGetCommand@2
+  inputs:
+    command: 'pack'
+    packagesToPack: '**/*.nuspec'
+    versioningScheme: 'off'
+    
+- task: NuGetCommand@2
   displayName: NuGet push GitHub-Packages
   continueOnError: true
   inputs:
