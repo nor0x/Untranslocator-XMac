@@ -6,10 +6,10 @@
     <title>Untranslocation package for Xamarin.Mac</title>
     <authors>nor0x</authors>
     <owners>nor0x</owners>
-    <licenseUrl>https://github.com/nor0x/Untranslocator</licenseUrl>
-    <projectUrl>https://github.com/nor0x/Untranslocator</projectUrl>
-    <repository type="git" url="https://github.com/nor0x/Untranslocator" />
-    <iconUrl>https://raw.githubusercontent.com/nor0x/Untranslocator/master/art/logo.png</iconUrl>
+    <licenseUrl>https://github.com/nor0x/Untranslocator-XMac</licenseUrl>
+    <projectUrl>https://github.com/nor0x/Untranslocator-XMac</projectUrl>
+    <repository type="git" url="https://github.com/nor0x/Untranslocator-XMac" />
+    <iconUrl>https://raw.githubusercontent.com/nor0x/Untranslocator-XMac/main/art/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Untranslocator allows to get the original path from a translocated macOS app (App Translocation)</description>
     <releaseNotes>initial release</releaseNotes>
