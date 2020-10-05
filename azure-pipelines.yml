@@ -28,7 +28,7 @@ steps:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
     nuGetFeedType: 'external'
-    publishFeedCredentials: 'gh-packages'
+    publishFeedCredentials: 'github-packages'
 
 - task: NuGetCommand@2
   displayName: NuGet push Nuget.org
